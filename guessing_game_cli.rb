@@ -3,12 +3,11 @@ def run_guessing_game
   random_number = rand(1..6)
   puts "guess a number between 1 and 6"
   a = gets.chomp
-  p random_number
   if a == "exit"
-    p "Goodbye!"
+    puts "Goodbye!"
+  elsif a.to_i == random_number
+    puts "You guessed the correct number!"
   elsif a.to_i != random_number
-    p "Sorry! The computer guessed #{random_number+1}."
-  else
-      p "You guessed the correct number!"
+    puts "Sorry! The computer guessed #{random_number}."
   end
 end
